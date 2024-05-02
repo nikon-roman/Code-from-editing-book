@@ -7,8 +7,8 @@ from direction import Direction
 class GameStateTest(unittest.TestCase):
     def test_snake_should_move_right(self):
         state = GameState(snake=[Position(1, 2), Position(1, 3), Position(1, 4)],
-                          direction=Direction.RIGHT,
-                          food=Position(10, 10), field_size=20)
+                        direction=Direction.RIGHT,
+                        food=Position(10, 10), field_size=20)
 
         state.step()
 
@@ -18,8 +18,8 @@ class GameStateTest(unittest.TestCase):
 
     def test_snake_should_move_left(self):
         state = GameState(snake=[Position(1, 2), Position(1, 3), Position(1, 4)],
-                          direction=Direction.LEFT,
-                          food=Position(10, 10), field_size=20)
+                        direction=Direction.LEFT,
+                        food=Position(10, 10), field_size=20)
 
         state.step()
 
@@ -29,7 +29,7 @@ class GameStateTest(unittest.TestCase):
 
     def test_snake_should_move_up(self):
         state = GameState(snake=[Position(1, 2), Position(1, 3), Position(1, 4)],
-                          direction=Direction.UP, food=Position(10, 10), field_size=20)
+                        direction=Direction.UP, food=Position(10, 10), field_size=20)
 
         state.step()
 
@@ -39,7 +39,7 @@ class GameStateTest(unittest.TestCase):
 
     def test_snake_should_move_down(self):
         state = GameState(snake=[Position(1, 2), Position(1, 3), Position(1, 4)],
-                          direction=Direction.DOWN, food=Position(10, 10), field_size=20)
+                        direction=Direction.DOWN, food=Position(10, 10), field_size=20)
 
         state.step()
 
@@ -49,7 +49,7 @@ class GameStateTest(unittest.TestCase):
 
     def test_snake_should_move_up_on_top(self):
         state = GameState(snake=[Position(2, 2), Position(2, 1), Position(2, 0)],
-                          direction=Direction.UP, food=Position(10, 10), field_size=20)
+                        direction=Direction.UP, food=Position(10, 10), field_size=20)
 
         state.step()
 
@@ -58,7 +58,7 @@ class GameStateTest(unittest.TestCase):
 
     def test_snake_should_move_right_on_edge(self):
         state = GameState(snake=[Position(17, 1), Position(18, 1), Position(19, 1)],
-                          direction=Direction.RIGHT, food=Position(10, 10), field_size=20)
+                        direction=Direction.RIGHT, food=Position(10, 10), field_size=20)
 
         state.step()
 
@@ -68,7 +68,7 @@ class GameStateTest(unittest.TestCase):
 
     def test_snake_eats_food(self):
         state = GameState(snake=[Position(1, 2), Position(2, 2), Position(3, 2)],
-                          direction=Direction.UP, food=Position(3, 1), field_size=20)
+                        direction=Direction.UP, food=Position(3, 1), field_size=20)
 
         state.step()
 
@@ -80,7 +80,7 @@ class GameStateTest(unittest.TestCase):
 
     def test_snake_dies(self):
         state = GameState(snake=[Position(1, 2), Position(2, 2), Position(3, 2), Position(3, 3), Position(2, 3)],
-                          direction=Direction.UP, food=Position(3, 1), field_size=25)
+                        direction=Direction.UP, food=Position(3, 1), field_size=25)
 
     def test_turn(self):
         state = GameState(
